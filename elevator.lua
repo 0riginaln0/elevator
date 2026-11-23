@@ -103,11 +103,11 @@ local function jump_to_symbol(direction)
 end
 
 command.add("core.docview", {
-  ["_elevator:down"]     = function() jump_to_symbol(1) end,
-  ["_elevator:up"] = function() jump_to_symbol(-1) end,
+  ["elevator:down"] = function() jump_to_symbol(1) end,
+  ["elevator:up"] = function() jump_to_symbol(-1) end,
 })
 
 keymap.add {
-  ["ctrl+down"] = "_elevator:down",
-  ["ctrl+up"]   = "_elevator:up",
+  ["ctrl+down"] = "elevator:down",
+  ["ctrl+up"] = "elevator:up",
 }
