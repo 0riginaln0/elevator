@@ -24,6 +24,7 @@ local langs = {
       "^union",
       "^bitstruct",
       "^enum",
+      "^excuse",
       "^fault",
       "^faultdef",
       "^interface",
