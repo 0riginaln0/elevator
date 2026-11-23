@@ -1,4 +1,4 @@
-# _elevator
+# elevator
 
 Jump between symbols in the current document.
 
