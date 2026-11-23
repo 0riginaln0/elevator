@@ -63,7 +63,7 @@ local function is_symbol_line(lang, text)
   return false
 end
 
-local function goto_symbol(direction)
+local function jump_to_symbol(direction)
   local doc = get_doc()
   if not doc then return end
 
@@ -87,13 +87,12 @@ local function goto_symbol(direction)
     i = i + direction
   end
 
-  core.status_view:show_message("No more symbols " ..
-    (direction > 0 and "below" or "above"))
+  core.status_view:show_message("No more symbols " .. (direction > 0 and "below" or "above"))
 end
 
 command.add("core.docview", {
-  ["_elevator:down"]     = function() goto_symbol(1) end,
-  ["_elevator:up"] = function() goto_symbol(-1) end,
+  ["_elevator:down"]     = function() jump_to_symbol(1) end,
+  ["_elevator:up"] = function() jump_to_symbol(-1) end,
 })
 
 keymap.add {
