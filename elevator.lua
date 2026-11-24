@@ -108,6 +108,6 @@ command.add("core.docview", {
 })
 
 keymap.add {
-  ["ctrl+down"] = "elevator:down",
-  ["ctrl+up"] = "elevator:up",
+  ["alt+down"] = "elevator:down",
+  ["alt+up"] = "elevator:up",
 }
